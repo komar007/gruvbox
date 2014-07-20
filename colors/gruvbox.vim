@@ -81,8 +81,9 @@ let s:is_dark=(&background == 'dark')
 let s:gb = {}
 
 if s:is_dark
-	let s:gb.dark0  = ['282828', 235]     " 40-40-40
+	let s:gb.dark0  = ['000000', 235]     " 40-40-40
 	let s:gb.dark1  = ['3c3836', 237]     " 60-56-54
+	let s:gb.verydark  = ['222222', 237]     " 60-56-54
 	let s:gb.dark2  = ['504945', 239]     " 80-73-69
 	let s:gb.dark3  = ['665c54', 241]     " 102-92-84
 	let s:gb.dark4  = ['7c6f64', 243]     " 124-111-100
@@ -106,7 +107,7 @@ if s:is_dark
 	let s:gb.orange = ['fe8019', 208]     " 254-128-25
 
 	if g:gruvbox_termcolors == 16
-		let s:gb.dark0  = ['282828', 0]
+		let s:gb.dark0  = ['000000', 0]
 		let s:gb.light4 = ['a89984', 7]
 		let s:gb.medium = ['928374', 8]
 		let s:gb.red    = ['fb4934', 9]
@@ -301,7 +302,7 @@ endif
 
 if version >= 700
 	" Screen line that the cursor is
-	call s:HL('CursorLine',   'none', 'dark1')
+	call s:HL('CursorLine',   'none', 'verydark')
 	" Screen column that the cursor is
 	call s:HL('CursorColumn', 'none', 'dark1')
 
